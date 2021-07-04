@@ -1,62 +1,11 @@
 package com.example.graph;
 
+/*
+
 import java.util.LinkedList;
-import java.util.NoSuchElementException;
+import java.util.Queue;
 import java.util.Stack;
 
-class Queue<T> {
-
-    class Node<T> {
-        private T data;
-        private Node<T> next;
-
-        Node(T data) {
-            this.data = data;
-        }
-    }
-
-    private Node<T> first;
-    private Node<T> last;
-
-    public void add(T data) {
-        Node<T> node = new Node<T>(data);
-
-        if(last != null) {
-            last.next = node;
-        }
-        last = node;
-        if(first == null) {
-            first = last;
-        }
-    }
-
-    public T remove() {
-        if(first == null) {
-            throw new NoSuchElementException();
-        }
-
-        T data = first.data;
-        first = first.next;
-
-        if(first == null) {
-            last = null;
-        }
-
-        return data;
-    }
-
-    public T peek() {
-        if(first == null) {
-            throw new NoSuchElementException();
-        }
-
-        return first.data;
-    }
-
-    public boolean isEmpty() {
-        return first == null;
-    }
-}
 
 class Graph {
     class Node {
@@ -118,7 +67,7 @@ class Graph {
 
     void bfs(int index) {
         Node root = nodes[index];
-        Queue<Node> queue = new Queue<Node>();
+        Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         root.marked = true;
         while(!queue.isEmpty()) {
@@ -160,15 +109,17 @@ class Graph {
 }
 
 
+*/
 /*
  dfs(0) : 0 1 3 5 7 6 8 4 2
  bfs(0) : 0 1 2 3 4 5 6 7 8
- dfs(0) : 0 1 2 4 3 5 6 8 7  - recursive
+ dfsR(0) : 0 1 2 4 3 5 6 8 7  - recursive
  ------------------------------------
  dfs(3) : 3 5 7 6 8 4 2 1 0
  bfs(3) : 3 1 2 4 5 0 6 7 8
- dfs(0) : 3 1 0 2 4 5 6 8 7  - recursive
- */
+ dfsR(3) : 3 1 0 2 4 5 6 8 7  - recursive
+ *//*
+
 public class test {
     public static void main(String[] args) {
         Graph g = new Graph(9);
@@ -184,7 +135,7 @@ public class test {
         g.addEdge(6, 8);
 
         // g.dfs();
-        g.dfsR(3);
+        g.bfs(3);
 
     }
-}
+}*/
