@@ -1,4 +1,4 @@
-package com.example;
+package com.example.tree;
 
 
 
@@ -11,6 +11,7 @@ Inorder (Left, Root, Right) : 4 2 5 1 3
 PreOrder (Root, Left, Right) : 1 2 4 5 3
 PostOrder (Left, Right, Root) : 4 5 2 3 1
 */
+/*
 
 class Node {
     int data;
@@ -62,3 +63,4 @@ class Tree {
 }
 public class 트리 {
 }
+*/
