@@ -49,7 +49,7 @@ class ArrayList<T> {
             throw new Exception("Negative Value");
         }
 
-        for(int x = i; x < this.data.length - 1; x++) {
+        for(int x = i; x < this.index; x++) {
             this.data[x] = this.data[x+1];
         }
         index--;
@@ -68,6 +68,11 @@ public class ArrayList_test<T> {
         al.add("7");
         al.add("8");
         al.add("9");
+        al.add("10");
+        al.add("11");
+        al.add("12");
+        al.add("13");
+        al.add("14");
 
         System.out.println(al.get(5));
         al.remove(5);

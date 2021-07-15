@@ -25,7 +25,7 @@ public class MergeSort2 {
         int index = start;
 
         while(part1 <= mid && part2 <= end) {
-            if(arr[part1] < arr[part2]) {
+            if(tmp[part1] < tmp[part2]) {
                 arr[index] = tmp[part1];
                 part1++;
             } else {
@@ -36,7 +36,7 @@ public class MergeSort2 {
         }
 
         for(int i = 0; i <= mid - part1; ++i) {
-            arr[part1 + i] = tmp[part1 + i];
+            arr[index + i] = tmp[part1 + i];
         }
     }
 
@@ -52,6 +52,7 @@ public class MergeSort2 {
     public static void main(String[] args) {
         int[] arr = {16,4,2,1,56,23,3,5};
 
+        printArray(arr);
         mergeSort(arr);
         printArray(arr);
     }
